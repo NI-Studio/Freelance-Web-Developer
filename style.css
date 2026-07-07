@@ -664,3 +664,51 @@ input[type="file"].admin-input::file-selector-button:hover {
   border-color: var(--accent); /* Tukar sempadan jadi warna violet */
   color: var(--accent);
 }
+
+/* =========================================
+   Kesan Navbar Moden (Glassmorphism)
+========================================= */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  /* Transisi yang lebih lembut ala-ala Apple */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-bottom: 1px solid transparent;
+}
+
+/* Keadaan Menu bila diskrol (Tema Terang) */
+.nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px) saturate(180%); /* Efek kaca */
+  -webkit-backdrop-filter: blur(12px) saturate(180%); /* Sokongan Safari */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  padding: 15px 0; /* Ubah saiz padding supaya lebih kemas bila skrol */
+}
+
+/* Keadaan Menu bila diskrol (Tema Gelap) */
+/* Nota: Ini menyasarkan class .dark-mode atau atribut data-theme pada <body> */
+body.dark-mode .nav.scrolled,
+body[data-theme="dark"] .nav.scrolled {
+  background-color: rgba(18, 18, 18, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   Alihkan "Skrol" ke bawah untuk Mobile
+========================================= */
+@media (max-width: 768px) {
+  .scroll-cue {
+    position: absolute;
+    bottom: 15px; /* Kurangkan nilai ini (contoh: 5px) jika nak lebih ke bawah */
+  }
+  
+  /* Tambah sedikit ruang di bawah butang supaya tak bertembung dengan 'Skrol' */
+  .hero-inner {
+    padding-bottom: 80px; 
+  }
+}
