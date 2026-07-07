@@ -14,23 +14,33 @@ function initThemeToggle(){
   const toggle = document.getElementById('theme-toggle');
   if (!toggle) return;
 
+  // Semak jika pengguna pernah menyimpan pilihan tema mereka
   const saved = localStorage.getItem('ni-theme');
-  if (saved === 'light'){
+  
+  // Jika pengguna pernah pilih gelap sebelum ini, kita tukarkan ke gelap
+  if (saved === 'dark'){
+    root.removeAttribute('data-theme');
+    toggle.setAttribute('aria-label', 'Tukar ke tema terang');
+  } else {
+    // Jika tiada rekod (first time) atau mereka pilih terang, pastikan ia terang
     root.setAttribute('data-theme', 'light');
-    toggle.setAttribute('aria-label', 'Switch to dark theme');
+    toggle.setAttribute('aria-label', 'Tukar ke tema gelap');
   }
 
+  // Fungsi apabila butang ditekan
   toggle.addEventListener('click', () => {
     const isLight = root.getAttribute('data-theme') === 'light';
 
     if (isLight){
+      // Tukar ke Gelap
       root.removeAttribute('data-theme');
       localStorage.setItem('ni-theme', 'dark');
-      toggle.setAttribute('aria-label', 'Switch to light theme');
+      toggle.setAttribute('aria-label', 'Tukar ke tema terang');
     } else {
+      // Tukar ke Terang
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('ni-theme', 'light');
-      toggle.setAttribute('aria-label', 'Switch to dark theme');
+      toggle.setAttribute('aria-label', 'Tukar ke tema gelap');
     }
   });
 }
