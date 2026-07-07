@@ -614,6 +614,16 @@ footer{
 
 @media (max-width: 640px){
   section{ padding: 90px 0; }
+
+/* Sembunyikan butang Desktop, Munculkan butang Mobile */
+  .email-desktop {
+    display: none !important;
+  }
+  
+  .email-mobile {
+    display: flex !important; /* Gunakan flex supaya rupa kad tak lari */
+  }
+
   
   /* Tambah ruang atas supaya tak rapat menu */
   .hero {
@@ -753,4 +763,9 @@ input[type="file"].admin-input::file-selector-button:hover {
 @keyframes modalFadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sembunyikan kad e-mel mobile pada paparan laptop secara lalai */
+.email-mobile {
+  display: none !important;
 }
