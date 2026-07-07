@@ -664,3 +664,55 @@ input[type="file"].admin-input::file-selector-button:hover {
   border-color: var(--accent); /* Tukar sempadan jadi warna violet */
   color: var(--accent);
 }
+
+/* ================= MODAL STYLES ================= */
+.modal-overlay {
+  display: none; /* Sembunyi secara lalai */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.show {
+  display: flex; /* Muncul bila dipanggil */
+}
+
+.modal-box {
+  background-color: #ffffff; /* Tukar jika anda pakai tema gelap */
+  color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: 0.2s;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
