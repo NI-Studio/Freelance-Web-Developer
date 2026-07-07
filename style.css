@@ -698,17 +698,3 @@ body[data-theme="dark"] .nav.scrolled {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* =========================================
-   Alihkan "Skrol" ke bawah untuk Mobile
-========================================= */
-@media (max-width: 768px) {
-  .scroll-cue {
-    position: absolute;
-    bottom: 15px; /* Kurangkan nilai ini (contoh: 5px) jika nak lebih ke bawah */
-  }
-  
-  /* Tambah sedikit ruang di bawah butang supaya tak bertembung dengan 'Skrol' */
-  .hero-inner {
-    padding-bottom: 80px; 
-  }
-}
