@@ -320,8 +320,9 @@ h1,h2,h3{ font-family: var(--font-display); font-weight: 600; letter-spacing: -.
 .hero-eyebrow{ margin-bottom: 22px; opacity: 0; animation: fade-up .8s var(--ease) .1s forwards; }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  max-width: 20ch; /* Tukar daripada 14ch kepada 20ch (atau 800px) supaya ia melembar ke tepi */
+  font-size: clamp(1.8rem, 8vw, 4.6rem); /* Saiz minimum dikurangkan ke 1.8rem */
+  line-height: 1.15; /* Rapatkan sikit jarak antara baris */
+  max-width: 20ch; 
   opacity: 0;
   animation: fade-up .9s var(--ease) .22s forwards;
 }
@@ -335,10 +336,10 @@ h1,h2,h3{ font-family: var(--font-display); font-weight: 600; letter-spacing: -.
 }
 
 .hero p {
-  margin-top: 22px;
-  max-width: 60ch; /* Tukar daripada 46ch kepada 60ch supaya perenggan juga lebih lebar */
+  margin-top: 16px; /* Kurangkan sedikit jarak atas */
+  max-width: 60ch;
   color: var(--ink-dim);
-  font-size: 1.08rem;
+  font-size: clamp(0.95rem, 4vw, 1.08rem); /* Teks perenggan turut mengecil di phone */
   opacity: 0;
   animation: fade-up .9s var(--ease) .34s forwards;
 }
@@ -613,9 +614,28 @@ footer{
 
 @media (max-width: 640px){
   section{ padding: 90px 0; }
-
+  
+  /* Tambah ruang atas supaya tak rapat menu */
   .hero {
-    padding-top: 130px; /* Jarak ekstra untuk telefon pintar */
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  /* Susun butang jadi atas/bawah supaya muat */
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center; /* Teks butang duduk tengah */
+  }
+
+  /* Sembunyikan "Skrol" pada skrin telefon supaya tak semak */
+  .scroll-cue {
+    display: none;
   }
 
   .nav-links{
