@@ -166,3 +166,22 @@ function initHeroCanvas(){
     makeParticles();
   });
 }
+
+// ================= MODAL FUNCTION =================
+function openModal(e) {
+  e.preventDefault(); // Mengelakkan skrin melompat ke atas
+  document.getElementById('devModal').classList.add('show');
+}
+
+// Tutup modal apabila butang 'X' ditekan
+document.querySelector('.close-modal').addEventListener('click', function() {
+  document.getElementById('devModal').classList.remove('show');
+});
+
+// Tutup modal apabila pengguna klik di luar kawasan kotak (ruang kosong)
+window.addEventListener('click', function(event) {
+  let modal = document.getElementById('devModal');
+  if (event.target === modal) {
+    modal.classList.remove('show');
+  }
+});
