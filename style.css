@@ -769,3 +769,103 @@ input[type="file"].admin-input::file-selector-button:hover {
 .email-mobile {
   display: none !important;
 }
+
+/* =============================================================
+   Packages / Pricing Grid
+   ============================================================= */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.package-card {
+  position: relative;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 38px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .5s var(--ease), border-color .5s var(--ease), box-shadow .5s var(--ease);
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+/* Penekanan untuk Pakej Paling Popular */
+.package-card.popular {
+  border-color: var(--accent);
+  box-shadow: 0 10px 40px -10px rgba(108, 99, 255, 0.15);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.package-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.package-card .price {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(100deg, var(--accent), var(--accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+}
+
+.package-card p {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+
+.package-card .features {
+  flex-grow: 1; /* Menolak butang CTA ke bahagian paling bawah */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.package-card .features li {
+  color: var(--ink);
+  font-size: 0.92rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* =============================================================
+   Responsive Adjustments for Packages
+   ============================================================= */
+@media (max-width: 900px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 40px; /* Jarak lebih besar bila susun menegak */
+  }
+}
