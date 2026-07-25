@@ -1,9 +1,10 @@
 const CACHE_NAME = 'nistudio-cache-v1';
 const urlsToCache = [
-  '/',
-  '/style.css',
-  '/main.js',
-  '/assets/logo.png'
+  './',
+  'index.html',
+  'style.css',
+  'main.js',
+  'assets/logo.png'
 ];
 
 self.addEventListener('install', event => {
