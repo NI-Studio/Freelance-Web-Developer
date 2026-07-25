@@ -2,7 +2,7 @@
   "name": "NI.Studio — Freelance Web Developer",
   "short_name": "NI.Studio",
   "description": "Membina laman web yang pantas, responsif, dan direka khas untuk keperluan perniagaan anda.",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
