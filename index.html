@@ -297,11 +297,11 @@
 
 <script src="main.js"></script>
 
-<!-- Kod pendaftaran Service Worker (PWA) -->
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
+      // Tukar '/sw.js' kepada './sw.js'
+      navigator.serviceWorker.register('./sw.js')
         .then(reg => console.log('PWA: Service Worker berjaya didaftarkan!'))
         .catch(err => console.log('PWA: Service Worker gagal', err));
     });
