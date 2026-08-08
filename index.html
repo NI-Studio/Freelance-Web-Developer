@@ -7,7 +7,6 @@
 
 <!-- Ikon Tab Browser -->
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="manifest" href="manifest.json">
 
 <meta name="description" content="NI.Studio — Pembangun web bebas (freelancer). Membina laman web yang pantas, responsif, dan direka khas untuk keperluan perniagaan anda.">
 
@@ -143,7 +142,7 @@
           <li>✔ Third-party API integration</li>
           <li>✔ Timeline depends on project scope</li>
         </ul>
-        <!-- Pautan WhatsApp untuk Pakej Custom Web App (Teks butang telah ditukar) -->
+        <!-- Pautan WhatsApp untuk Pakej Custom Web App -->
         <a href="https://wa.me/601112085054?text=Hi%20Naqib,%20I'm%20interested%20in%20the%20Custom%20Web%20App%20package.%20Can%20we%20discuss%20further?" target="_blank" rel="noopener" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 20px;">Choose Package</a>
       </article>
 
@@ -160,7 +159,6 @@
       <p>A collection of web development projects—ranging from interface (frontend) layouts to system (backend) integration—built to meet the unique requirements of each client.</p>
     </div>
 
-      <!-- Contoh Projek 1: S&H Event Automotive -->
       <div class="work-grid reveal-stagger">
       
      <article class="card">
@@ -215,7 +213,18 @@
         </div>
       </article>
 
-
+      <article class="card">
+        <div class="card-body">
+          <h3>Mekar Bakeri</h3>
+          <p>An artisanal bakery web platform featuring a curated digital menu, a visual gallery of daily bakes, and a heritage-driven brand story emphasizing fresh, Halal-certified goods.</p>
+          <a class="card-link" href="https://ni-studio.github.io/Mekar-Bakeri/" target="_blank" rel="noopener">
+            Visit the website
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
 
     </div>
   </div>
@@ -227,53 +236,12 @@
     <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
       <p class="eyebrow" style="justify-content:center;">Contact</p>
       <h2>Need a developer for your website?</h2>
-      <p>Whether you want to build a website from scratch or upgrade an existing one, tap the card below to discuss directly via WhatsApp or email.</p>
+      <p>Whether you want to build a website from scratch or upgrade an existing one, tap the card below to discuss directly via WhatsApp.</p>
     </div>
 
-    <div class="contact-cards reveal-stagger">
+    <div class="contact-cards reveal-stagger" style="justify-content: center;">
 
-     <!-- 1. BUTANG E-MEL UNTUK LAPTOP/DESKTOP (Buka tab Gmail Web) -->
-      <a class="contact-card email-desktop" href="https://mail.google.com/mail/?view=cm&fs=1&to=naqibimannn@gmail.com&su=Pertanyaan+Projek+Laman+Web+—+NI.Studio" target="_blank" rel="noopener">
-        <span class="contact-card-glow glow-mail"></span>
-        <span class="contact-card-icon icon-mail">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="M22 6l-10 7L2 6"/>
-          </svg>
-        </span>
-        <span class="contact-card-body">
-          <span class="channel-label">(Gmail)</span>
-          <span class="channel-value">naqibimannn@gmail.com</span>
-        </span>
-        <span class="contact-card-cta">
-          Open Gmail
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7M7 7h10v10"/>
-          </svg>
-        </span>
-      </a>
-
-      <!-- 2. BUTANG E-MEL UNTUK MOBILE (Buka aplikasi e-mel telefon) -->
-      <a class="contact-card email-mobile" href="mailto:naqibimannn@gmail.com?subject=Pertanyaan Projek Laman Web — NI.Studio">
-        <span class="contact-card-glow glow-mail"></span>
-        <span class="contact-card-icon icon-mail">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="M22 6l-10 7L2 6"/>
-          </svg>
-        </span>
-        <span class="contact-card-body">
-          <span class="channel-label">(Gmail)</span>
-          <span class="channel-value">naqibimannn@gmail.com</span>
-        </span>
-        <span class="contact-card-cta">
-          Send e-mel
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7M7 7h10v10"/>
-          </svg>
-        </span>
-      </a>
-
+      <!-- HANYA WHATSAPP DIKEKALKAN -->
       <a class="contact-card" href="https://wa.me/601112085054" target="_blank" rel="noopener">
         <span class="contact-card-glow glow-wa"></span>
         <span class="contact-card-icon icon-wa">
@@ -311,24 +279,12 @@
   <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
     <span class="footer-mark">NI.Studio © 2026</span>
     <div class="footer-socials">
-      <a href="mailto:naqibimannn@gmail.com?subject=Pertanyaan Projek Laman Web — NI.Studio">E-mel</a>
       <a href="https://wa.me/601112085054" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </footer>
 
 <script src="main.js"></script>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      // Tukar '/sw.js' kepada './sw.js'
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('PWA: Service Worker berjaya didaftarkan!'))
-        .catch(err => console.log('PWA: Service Worker gagal', err));
-    });
-  }
-</script>
   
 </body>
 </html>
